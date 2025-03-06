@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="30dp"
+            tools:context=".InformationActivity">
+
+        <ImageView
+                android:layout_width="150dp"
+                android:layout_height="95dp"
+                app:srcCompat="@drawable/logo"
+                android:id="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="64dp"
+                />
+        <!--    <TextView-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:id="@+id/textNameCompany"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:text="Aqui va la empresa"-->
+        <!--            android:textSize="25sp"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/imageView"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--    />-->
+        <androidx.cardview.widget.CardView
+                android:id="@+id/Container"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                <androidx.cardview.widget.CardView
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_horizontal"
+                        app:cardBackgroundColor="@color/primary"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Próxima fecha de pago"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+
+                        >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            >
+
+                        <TextView
+                                android:id="@+id/textDateDue"
+                                android:text="01/NOVIEMBRE/2024"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:textSize="30sp"
+                                />
+                        <TextView
+                                android:id="@+id/textTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_marginTop="1dp"
+                                android:textStyle="bold"
+                                android:textAlignment="textStart"
+                                android:text="Hora 19:00"
+                                android:textSize="15sp"
+                                />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/Container1"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/Container"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                <androidx.cardview.widget.CardView
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        app:cardBackgroundColor="@color/primary"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="16dp"
+                            android:text="Información del equipo"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="210dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            >
+                        <TextView
+                                android:id="@+id/labelDeviceID"
+                                android:text="Código look:"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                />
+                        <TextView
+                                android:id="@+id/deviceID"
+                                android:text="LOCK-000000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="21sp"
+                                android:textColor="@color/black"
+
+                                />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/Container2"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/Container1"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                <androidx.cardview.widget.CardView
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        app:cardBackgroundColor="@color/primary"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="16dp"
+                            android:text="HORARIOS 10:00-19:00"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:gravity=""
+                        >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:layout_width="210dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                        <TextView
+                                android:id="@+id/textLabelContact1"
+                                android:text="Registro de pagos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                />
+                        <TextView
+                                android:id="@+id/textContact1"
+                                android:text="0999999999"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="21sp"
+                                android:textColor="@color/black"
+
+                                />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.cardview.widget.CardView
+                            android:id="@+id/ButtonContact1"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="60dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            >
+                        <ImageView
+                                android:padding="12dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/call"
+                                android:background="@color/black"
+                                android:contentDescription="calendar"
+
+                                />
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/Container3"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/Container2"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                <androidx.cardview.widget.CardView
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        app:cardBackgroundColor="@color/primary"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="16dp"
+                            android:text="HORARIOS 10:00-19:00"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:gravity=""
+
+                        >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:layout_width="210dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                        <TextView
+                                android:id="@+id/textLabelContact2"
+                                android:text="Contacto de soporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                />
+                        <TextView
+                                android:id="@+id/textContact2"
+                                android:text="0999999999"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="21sp"
+                                android:textColor="@color/black"
+
+                                />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.cardview.widget.CardView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="60dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/ButtonContact2"
+                            >
+                        <ImageView
+                                android:padding="12dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/call"
+                                android:background="@color/black"
+                                android:contentDescription="calendar"
+                                />
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/Container3"-->
+        <!--            android:layout_width="343dp"-->
+        <!--            android:layout_height="147dp"-->
+        <!--            android:layout_margin="16dp"-->
+        <!--            app:cardCornerRadius="16dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            android:orientation="vertical"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/Container2"-->
+        <!--    >-->
+
+        <!--        <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:gravity="center"-->
+        <!--                android:orientation="vertical"-->
+        <!--        >-->
+
+
+        <!--            <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="343dp"-->
+        <!--                    android:layout_height="60dp"-->
+        <!--                    android:gravity="center_vertical"-->
+        <!--                    app:cardBackgroundColor="@color/gray"-->
+
+        <!--            >-->
+        <!--                <TextView-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:paddingStart="16dp"-->
+        <!--                        android:paddingTop="15dp"-->
+        <!--                        android:text="Número de Soporte"-->
+        <!--                        android:textSize="25sp"-->
+        <!--                        android:textColor="@color/black"-->
+        <!--                />-->
+
+        <!--            </androidx.cardview.widget.CardView>-->
+        <!--            -->
+
+
+        <!--            <androidx.appcompat.widget.LinearLayoutCompat-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="match_parent"-->
+        <!--                    android:orientation="horizontal"-->
+        <!--                    android:paddingStart="30dp"-->
+        <!--                    android:paddingTop="8dp"-->
+        <!--                    android:gravity=""-->
+
+        <!--            >-->
+        <!--                <androidx.appcompat.widget.LinearLayoutCompat-->
+        <!--                        android:layout_width="210dp"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        android:layout_marginEnd="24dp"-->
+        <!--                        android:orientation="vertical"-->
+        <!--                >-->
+        <!--                    <TextView-->
+        <!--                            android:id="@+id/textLabelContact2"-->
+        <!--                            android:text="Contacto 2"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:textStyle="bold"-->
+        <!--                            android:textSize="22sp"-->
+        <!--                    />-->
+        <!--                    <TextView-->
+        <!--                            android:id="@+id/textContact2"-->
+        <!--                            android:text="0999999999"-->
+        <!--                            android:layout_width="wrap_content"-->
+        <!--                            android:layout_height="wrap_content"-->
+        <!--                            android:textStyle="bold"-->
+        <!--                            android:textSize="22sp"-->
+        <!--                    />-->
+        <!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        <!--                <ImageView-->
+        <!--                        android:padding="8dp"-->
+        <!--                        android:layout_width="60dp"-->
+        <!--                        android:layout_height="60dp"-->
+        <!--                        android:src="@drawable/call"-->
+        <!--                        android:contentDescription="calendar"-->
+
+        <!--                />-->
+
+
+        <!--            </androidx.appcompat.widget.LinearLayoutCompat>-->
+        <!--        </LinearLayout>-->
+
+
+        <!--    </androidx.cardview.widget.CardView>-->
+
+
+
+        <TextView
+                android:id="@+id/dateNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/Container3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:text="Fecha: 00-00-000 | Hora: 00:00:00"
+                android:textSize="15sp"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

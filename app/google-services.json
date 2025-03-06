@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1068703748488",
+    "project_id": "eng-gate-410901",
+    "storage_bucket": "eng-gate-410901.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1068703748488:android:93c397a3d06726cb8bea3d",
+        "android_client_info": {
+          "package_name": "com.touchin.lockplay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnmdiNzYULhMTk_2Azju8Lo8m5-gGv4kE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

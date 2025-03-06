@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            tools:context=".FirsAppActivity">
+
+        <TextView
+                android:id="@+id/texto0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:text="Dispositivo bloqueado"
+                android:textSize="15sp"
+                />
+        <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="64dp"
+                />
+        <LinearLayout
+                android:id="@+id/ContainerID"
+                android:layout_width="330dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/texto0"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+            <!--        <LinearLayout-->
+            <!--                android:id="@+id/containerUnlock"-->
+            <!--                android:background="@drawable/border"-->
+            <!--                android:backgroundTint="@color/gray"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:gravity="center"-->
+            <!--                android:layout_marginHorizontal="10dp"-->
+            <!--                android:paddingHorizontal="15dp"-->
+
+            <!--        >-->
+            <!--            <ImageView-->
+            <!--                    android:src="@drawable/home"-->
+            <!--                    android:layout_width="40dp"-->
+            <!--                    android:layout_height="40dp"/>-->
+            <!--            <TextView-->
+            <!--                    android:id="@+id/textNameCompany"-->
+            <!--                    android:textSize="11sp"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:text="KFC Compamie"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"/>-->
+            <!--        </LinearLayout>-->
+            <LinearLayout
+                    android:background="@drawable/border"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:backgroundTint="@color/primary"
+                    >
+                <TextView
+                        android:id="@+id/consult"
+                        android:text="Consultar"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <View
+                    android:layout_width="16dp"
+                    android:layout_height="match_parent"
+                    />
+            <!--        <LinearLayout-->
+            <!--                android:background="@drawable/border"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:gravity="center"-->
+            <!--                android:backgroundTint="@color/gray"-->
+            <!--                android:paddingHorizontal="15dp"-->
+            <!--                android:layout_marginHorizontal="10dp"-->
+            <!--        >-->
+            <!--            <TextView-->
+            <!--                    android:id="@+id/deviceID"-->
+            <!--                    android:text="KFC-000001"-->
+            <!--                    android:textSize="11sp"-->
+            <!--                    android:textColor="@color/black"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"/>-->
+            <!--        </LinearLayout>-->
+            <LinearLayout
+                    android:id="@+id/containerUnlock1"
+                    android:background="@drawable/border"
+                    android:backgroundTint="@color/primary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                <TextView
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:text="Liberar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--<androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/textInput"
+                android:layout_width="203dp"
+                android:layout_height="51dp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:background="@color/teal_200"
+                app:layout_constraintTop_toBottomOf="@id/texto1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="25dp"
+        />-->
+        <!--<androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSendCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnActiveKiosk"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:text="Desbloquear"
+                android:textSize="25sp"
+        />
+        <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnActiveKiosk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInput"
+        app:layout_constraintEnd_toStartOf="@id/btnSendCode"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:text="Bloquear"
+        android:textSize="25sp"
+        />
+    -->
+
+        <!--   <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/btnInformation"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toStartOf="@+id/btnLogin"
+                   app:layout_constraintStart_toStartOf="parent"
+                   android:textStyle="bold"
+                   android:layout_marginTop="25dp"
+                   android:text="Inf"
+                   android:textSize="25sp"
+                   app:layout_constraintVertical_bias="0.372"/>-->
+
+        <!--   <androidx.appcompat.widget.AppCompatButton
+                   android:id="@+id/btnSocket"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/btnInformation"
+                   app:layout_constraintStart_toStartOf="parent"
+                   android:textStyle="bold"
+                   android:layout_marginTop="25dp"
+                   android:text="Conectar al socket"
+                   android:textSize="25sp"
+                   app:layout_constraintVertical_bias="0.372"/>-->
+
+        <!--<androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnInformation"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:text="Ir al login"
+                android:textSize="25sp"
+                app:layout_constraintVertical_bias="0.372"/>-->
+        <androidx.cardview.widget.CardView
+                android:id="@+id/Container1"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/ContainerID"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                <androidx.cardview.widget.CardView
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        app:cardBackgroundColor="@color/primary"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="16dp"
+                            android:text="Información del equipo"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="210dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            >
+                        <TextView
+                                android:id="@+id/labelDeviceID"
+                                android:text="Código look:"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                />
+                        <TextView
+                                android:id="@+id/deviceID"
+                                android:text="0999999999"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="21sp"
+                                android:textColor="@color/black"
+
+                                />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/Container2"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/Container1"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                <androidx.cardview.widget.CardView
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        app:cardBackgroundColor="@color/primary"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="16dp"
+                            android:text="HORARIOS 10:00-19:00"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:gravity=""
+                        >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:layout_width="210dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                        <TextView
+                                android:id="@+id/textLabelContact1"
+                                android:text="Registro de pagos"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                />
+                        <TextView
+                                android:id="@+id/textContact1"
+                                android:text="0999999999"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="21sp"
+                                android:textColor="@color/black"
+
+                                />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.cardview.widget.CardView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="60dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/ButtonContact1"
+                            >
+                        <ImageView
+                                android:padding="12dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/call"
+                                android:background="@color/black"
+                                android:contentDescription="calendar"
+
+                                />
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:id="@+id/Container3"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                android:layout_marginTop="250dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/Container2"
+                >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+                <androidx.cardview.widget.CardView
+                        android:layout_width="330dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        app:cardBackgroundColor="@color/primary"
+                        >
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="16dp"
+                            android:text="HORARIOS 10:00-19:00"
+                            android:textSize="16sp"
+                            android:textColor="@color/white"
+                            android:gravity="center_vertical"
+                            />
+
+                </androidx.cardview.widget.CardView>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:gravity=""
+
+                        >
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:layout_width="210dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            >
+                        <TextView
+                                android:id="@+id/textLabelContact2"
+                                android:text="Contacto de soporte"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                />
+                        <TextView
+                                android:id="@+id/textContact2"
+                                android:text="0999999999"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="21sp"
+                                android:textColor="@color/black"
+
+                                />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.cardview.widget.CardView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="60dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:id="@+id/ButtonContact2"
+                            >
+                        <ImageView
+                                android:padding="12dp"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/call"
+                                android:background="@color/black"
+                                android:contentDescription="calendar"
+
+                                />
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+                android:id="@+id/dateNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/Container3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:text="Fecha: 00-00-000 | Hora: 00:00:00"
+                android:textSize="15sp"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView >

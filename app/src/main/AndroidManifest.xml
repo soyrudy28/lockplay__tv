@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.touchin.lockplay">
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature
+            android:name="android.hardware.touchscreen"
+            android:required="false" />
+
+    <uses-feature
+            android:name="android.software.leanback"
+            android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.START_ACTIVITY" />
+    <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.DEVICE_ADMIN" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_DEVICE_ADMINS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <queries>
+        <package android:name="com.google.android.apps.work.clouddpc"/>
+        <package android:name="com.android.chrome" />
+        <package android:name="com.android.server.telecom" />
+        <package android:name="com.samsung.android.incallui" />
+        <intent>
+            <action android:name="android.intent.action.CALL" />
+            <data android:scheme="tel" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
+        </intent>
+        <package android:name="com.android.phone" />
+        <package android:name="com.sec.phone" />
+    </queries>
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:banner="@mipmap/ic_banner"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LockPlay">
+
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/calendar" />
+
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/design_default_color_background" />
+        <activity
+                android:name=".AdminPolicyComplianceActivity"
+                android:exported="true"
+                android:enabled="@bool/provision_mode_compliance_enabled"
+                android:screenOrientation="fullSensor"
+                android:theme="@style/Theme.AppCompat"
+                android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.ADMIN_POLICY_COMPLIANCE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".ProvisioningModeActivity"
+                android:screenOrientation="fullSensor"
+                android:exported="true"
+                android:enabled="@bool/provision_mode_compliance_enabled"
+                android:theme="@style/Theme.AppCompat"
+                android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.GET_PROVISIONING_MODE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.touchin.lockplay.LoginActivity"
+                android:exported="true">
+            <!--        <intent-filter>-->
+            <!--                            <action android:name="android.intent.action.MAIN"/>-->
+            <!--                            <category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--        </intent-filter>-->
+        </activity>
+
+        <activity android:name=".CargaActivity"
+                android:screenOrientation="portrait"
+                android:launchMode="singleTask"/>
+
+        <activity
+                android:name=".ui.WelcomeActivity"
+                android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.touchin.lockplay.InformationActivity"
+                android:theme="@style/Theme.LockPlay"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:lockTaskMode="if_whitelisted"
+                android:name="com.touchin.lockplay.FirsAppActivity"
+                android:clearTaskOnLaunch="true"
+                android:exported="true">
+            <intent-filter>
+                <!--                <action android:name="android.intent.action.MAIN"/>-->
+                <action android:name="android.intent.action.CALL"/>
+                <action android:name="android.intent.action.DIAL" />
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--Linea para enviar a la lista de wifi's-->
+        <activity
+                android:name=".admin.WifiListActivity"
+                android:exported="true"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                android:launchMode="singleTop"
+                android:screenOrientation="portrait" />
+
+        <receiver android:name="com.touchin.lockplay.EnableKioskModeReceiver" android:exported="true" android:permission="TODO"
+                tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="HACERLO" />
+            </intent-filter>
+        </receiver>
+        <receiver
+                android:name="com.touchin.lockplay.Services.SimChangeReceiver"
+                android:enabled="true"
+                android:exported="false">
+
+            <intent-filter>
+                <action android:name="android.telephony.action.DEFAULT_SUBSCRIPTION_CHANGED" />
+                <action android:name="com.example.ACTION_START_SERVICE" />
+                <!--                <action android:name="android.intent.action.PHONE_STATE" />-->
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+
+            </intent-filter>
+        </receiver>
+        <receiver
+                android:name="com.touchin.lockplay.Services.Brodcast"
+                android:enabled="true"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Services.Brodcast" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".BootReceiver"
+                android:enabled="true"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver
+                android:name="com.touchin.lockplay.AdminReceiver"
+                android:exported="true"
+                android:label="@string/device_admin"
+                android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                    android:name="android.app.device_admin"
+                    android:resource="@xml/device_admin_receiver"
+                    />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+                <action android:name="com.touchin.lockplay.KIOSK" />
+            </intent-filter>
+        </receiver>
+
+        <service
+                android:name="com.touchin.lockplay.SocketService"
+                android:enabled="true"
+                android:permission="android.permission.BIND_DEVICE_ADMIN"
+                android:foregroundServiceType="dataSync"
+                android:exported="false" tools:ignore="ForegroundServicePermission"
+                >
+            <meta-data
+                    android:name="android.app.device_admin"
+                    android:resource="@xml/device_admin_receiver"
+                    />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+            </intent-filter>
+        </service>
+        <service
+                android:name="com.touchin.lockplay.Workers.Job"
+                android:permission="android.permission.BIND_JOB_SERVICE"
+                />
+        <service
+                android:name=".Services.PushNotificationService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".admin.AdminRequiredActivity"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+                />
+
+    </application>
+</manifest>
